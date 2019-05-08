@@ -520,7 +520,7 @@
   <widget class="QPushButton" name="upArrow">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>120</y>
      <width>51</width>
      <height>51</height>
@@ -538,7 +538,7 @@
   <widget class="QPushButton" name="downArrow">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>180</y>
      <width>51</width>
      <height>51</height>
@@ -556,9 +556,9 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>140</y>
-     <width>41</width>
+     <x>150</x>
+     <y>130</y>
+     <width>16</width>
      <height>61</height>
     </rect>
    </property>
@@ -569,7 +569,7 @@
     </font>
    </property>
    <property name="text">
-    <string>1° </string>
+    <string>° </string>
    </property>
   </widget>
   <widget class="PlotWidget" name="tempPlot">
@@ -593,6 +593,19 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="stepEdit">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>150</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
    </property>
   </widget>
  </widget>

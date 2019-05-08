@@ -39,6 +39,8 @@ class JulaboApp(QtGui.QMainWindow, jui.Ui_Dialog):
         self.times2 = MaxSizeList(1000)
         self.t0 = time.time()
 
+        self.tstep = 0.0
+
         self.pen1 = pg.mkPen(color='r', width = 3)
         self.pen2 = pg.mkPen(color='b', width = 3)
 
@@ -76,12 +78,14 @@ class JulaboApp(QtGui.QMainWindow, jui.Ui_Dialog):
         self.tempPlot.plot(self.times2.get(),self.tsets.get(),clear = False,pen = self.pen2, name='Setpoint')
 
     def temp_up(self):
-        self.tset = self.tset + 1.0
+        self.tstep = float(self.stepEdit.text())
+        self.tset = self.tset + self.tstep
         ju.set_temp(self.tset)
         self.currentSetPointBox.display(self.tset)
 
     def temp_down(self):
-        self.tset = self.tset - 1.0
+        self.tstep = float(self.stepEdit.text())
+        self.tset = self.tset - self.tstep
         ju.set_temp(self.tset)
         self.currentSetPointBox.display(self.tset)
 
